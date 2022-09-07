@@ -1,0 +1,118 @@
+<div th:fragment="success">
+	<div th:if="${success}">
+		<div class="alert alert-success mt-3" role="alert">
+		  <h4 class="alert-heading"><i class="fas fa-check-circle"></i> Success</h4>
+		  <p th:text="${success}"></p >
+		  <hr>
+		  <p class="mb-0">Note: The message is provided by DESCO.</p>
+		</div>
+<!--		<div class="card mt-3">-->
+<!--			<h5 class="card-header">Print Information</h5>-->
+<!--			<div class="card-body offset-md-3 col-md-6 col-12">-->
+<!--					<table class="table table-bordered">-->
+<!--						<tbody>-->
+<!--						<tr >-->
+<!--							<td colspan="2">-->
+<!--								<p class="fw-bold mb-0">Customer Name</p>-->
+<!--								<p th:text="${vendingInfo.customerName}"></p>-->
+<!--								&lt;!&ndash;						<input type="hidden" th:field="${vendingInfo.customerName}" class="form-control" required id="customerName" name="customerName">&ndash;&gt;-->
+<!--							</td>-->
+<!--						</tr>-->
+<!--						<tr >-->
+<!--							<td >-->
+<!--								<p class="fw-bold mb-0">Meter Number</p>-->
+<!--								<p th:text="${vendingInfo.meterNum}"></p>-->
+<!--								<input type="hidden" th:field="${vendingInfo.meterNum}" class="form-control" required id="meterNum" name="meterNum">-->
+<!--							</td>-->
+<!--							<td >-->
+<!--								<p class="fw-bold mb-0">Meter Type</p>-->
+<!--								<div th:switch="${vendingInfo.meterType}">-->
+<!--									<p th:case="'02'">GPRS</p>-->
+<!--									<p th:case="'04'">PLC</p>-->
+<!--									<p th:case="'20'">Offline</p>-->
+<!--								</div>-->
+<!--								&lt;!&ndash;						<input type="hidden" th:field="${vendingInfo.meterType}" class="form-control" required id="meterType" name="meterNum">&ndash;&gt;-->
+<!--							</td >-->
+<!--						</tr >-->
+<!--						<tr >-->
+<!--							<td >-->
+<!--								<p class="fw-bold mb-0">Date Time</p>-->
+<!--								<p th:text="${vendingInfo.transTime}"></p>-->
+<!--								&lt;!&ndash;						<input type="hidden" th:field="${vendingInfo.transTime}" class="form-control" required id="transTime" name="transTime">&ndash;&gt;-->
+<!--							</td>-->
+<!--							<td >-->
+<!--								<p class="fw-bold mb-0">Trans Id</p>-->
+<!--								<p th:text="${vendingInfo.transID}"></p>-->
+<!--								<input type="hidden" th:field="${vendingInfo.transID}" class="form-control" required id="transID" name="transID">-->
+<!--							</td>-->
+<!--						</tr >-->
+<!--						<tr>-->
+<!--							<td class="fw-bold">Energy Cost:</td>-->
+<!--							<td class="fw-bold" th:text="${vendingInfo.engAMT} + ' TK'"></td >-->
+<!--							&lt;!&ndash;					<input type="hidden" th:field="${vendingInfo.engAMT}" class="form-control" required id="engAMT" name="engAMT">&ndash;&gt;-->
+<!--						</tr>-->
+<!--						<tr th:each="vendingInfos : ${vendingInfo.Fee.Item}">-->
+<!--							<td scope="row" th:text="${vendingInfos.Name}"></td>-->
+<!--							<td scope="row" th:text="${vendingInfos.Amt}  + 'TK'"></td>-->
+<!--							&lt;!&ndash;					<input type="hidden" th:field="${vendingInfos.Name}" class="form-control" required id="${vendingInfos.Name}" name="${vendingInfos.Name}">&ndash;&gt;-->
+<!--							&lt;!&ndash;					<input type="hidden" th:field="${vendingInfos.Amt}" class="form-control" required id="${vendingInfos.Amt}" name="${vendingInfos.Amt}">&ndash;&gt;-->
+<!--						</tr >-->
+<!--						<tr>-->
+<!--							<td>Arrear Recovery:</td>-->
+<!--							<td th:text="${vendingInfo.arrearAMT} + ' TK'"></td >-->
+<!--							&lt;!&ndash;					<input type="hidden" th:field="${vendingInfo.arrearAMT}" class="form-control" required id="arrearAMT" name="arrearAMT">&ndash;&gt;-->
+<!--						</tr>-->
+<!--						<tr>-->
+<!--							<td>Fee Amount:</td>-->
+<!--							<td th:text="${vendingInfo.feeAMT} + ' TK'"></td >-->
+<!--							&lt;!&ndash;					<input type="hidden" th:field="${vendingInfo.feeAMT}" class="form-control" required id="feeAMT" name="feeAMT">&ndash;&gt;-->
+<!--						</tr>-->
+<!--						<tr>-->
+<!--							<td class="fw-bold">Gross Amount:</td>-->
+<!--							<td class="fw-bold" th:text="${vendingInfo.vendAMT} + ' TK'"></td >-->
+<!--							&lt;!&ndash;					<input type="hidden" th:field="${vendingInfo.vendAMT}" class="form-control" required id="vendAMT" name="vendAMT">&ndash;&gt;-->
+<!--						</tr>-->
+<!--						<tr>-->
+<!--							<td colspan="2" class="fw-bold fs-5 text-center" th:text="${vendingInfo.token}">Token</td>-->
+<!--							&lt;!&ndash;					<td class="fw-bold" th:text="${vendingInfo.vendAMT} + ' TK'"></td >&ndash;&gt;-->
+<!--							&lt;!&ndash;					<input type="hidden" th:field="${vendingInfo.vendAMT}" class="form-control" required id="vendAMT" name="vendAMT">&ndash;&gt;-->
+<!--						</tr>-->
+
+<!--						<input type="hidden" th:field="${vendingInfo.refCode}" class="form-control" required id="refCode" name="refCode">-->
+<!--						&lt;!&ndash;				<input type="hidden" th:field="${vendingInfo.tariffCode}" class="form-control" required id="tariffCode" name="tariffCode">&ndash;&gt;-->
+<!--						&lt;!&ndash;				<input type="hidden" th:field="${vendingInfo.seq}" class="form-control" required id="seq" name="seq">&ndash;&gt;-->
+<!--						&lt;!&ndash;				<input type="hidden" th:field="${vendingInfo.token}" class="form-control" required id="token" name="token">&ndash;&gt;-->
+<!--						&lt;!&ndash;				<input type="hidden" th:field="${vendingInfo.Fee}" class="form-control" required id="fee" name="fee">&ndash;&gt;-->
+<!--						&lt;!&ndash;				<p th:text="${vendingInfo.Fee.Item}"></p>&ndash;&gt;-->
+
+
+
+
+<!--						</tbody>-->
+<!--					</table>-->
+<!--					<div class="card-footer">-->
+<!--						<div>-->
+<!--							<div class="col-sm-12 text-center">-->
+<!--								<button type="submit" class="btn btn-success" id="payNow" >-->
+<!--									<i class="fas fa-money-bill-alt"></i>-->
+<!--									Make Payment-->
+<!--								</button>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div >-->
+<!--			</div>-->
+<!--		</div>-->
+	</div >
+	<div th:if="${errorMessage}">
+		<div class="alert alert-danger mt-3" role="alert">
+		  <h4 class="alert-heading"><i class="fas fa-exclamation-triangle"></i> Error</h4>
+		  <p th:text="${errorMessage}"></p >
+		  <hr>
+			  <p class="mb-0">Note: The message is provided by DESCO.</p>
+		</div>
+	</div >
+	<div th:if="${serverInfo}" >
+		<div class="alert alert-danger mt-3" role="alert" th:text="${serverInfo}"></div>
+	</div>
+	
+</div>

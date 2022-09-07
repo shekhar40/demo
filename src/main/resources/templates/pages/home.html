@@ -1,0 +1,16 @@
+<div th:fragment="home" xmlns:th="http://www.w3.org/1999/xhtml">
+	<div class="alert alert-primary mt-3" role="alert">
+		<form>
+			<div class="form-group">
+				<label for="billsrch">Bill No:</label>
+				<input type="text" class="form-control" id="billsrch" placeholder="Search Bill" name="billsearch">
+			</div>
+
+				<input class="btn btn-primary" type="submit" value="Submit" align="Center">
+
+
+		</form>
+<!--	  <h4 class="alert-heading">Welcome!</h4>-->
+	  <p th:text="${homeContent}"></p>
+	</div>
+</div>

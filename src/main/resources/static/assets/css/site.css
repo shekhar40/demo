@@ -1,0 +1,139 @@
+/* DEFAULTS
+----------------------------------------------------------*/
+
+body   
+{
+
+
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+/* h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+} */
+
+/* h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+} */
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+
+.dropdown-menu{
+    background-color: #000076;
+    border-color: #FFF ;
+}
+.navbar-brand, .nav-link, .dropdown-item{
+    color: #FFF !important;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #1e2125 !important;
+    background-color: #e9ecef;
+    border-left: 1px solid #0000AA;
+    border-right: 1px solid #0000AA;
+}
+
+
+
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+/* table
+-----------------------------------------------------------*/
+.table > :not(caption) > * > * {
+    padding: 0px 0px 0px 11px !important ;
+}
+

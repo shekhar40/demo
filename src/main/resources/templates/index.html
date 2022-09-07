@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="fragments/_layout :: headerfiles">
+    
+</head >
+
+<body>
+    <div class="container border">
+        <!-- header -->
+        <header th:include="fragments/_layout :: header"></header >
+        <!-- header end -->
+        <!-- nav -->
+        <nav th:include="fragments/_layout :: nav" class="navbar navbar-expand-lg navbar-light" style="background-color: #2E3192;">
+        </nav >
+        <!-- nav end -->
+        <!-- content -->
+		<div th:include="pages/__${pages}__ :: __${pages}__"></div >
+        <!-- content end -->
+        <!-- footer -->
+        <footer th:include="fragments/_layout :: footer" class="footer mt-auto py-3 bg-light">
+        </footer>
+        <!-- footer end -->
+    </div>
+</body>
+
+</html>

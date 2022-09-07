@@ -1,0 +1,86 @@
+<div th:fragment="headerfiles" xmlns:th="http://www.w3.org/1999/xhtml">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="cache-control" content="no-cache" />
+	<title th:text="${title}"></title >
+	<link th:href="@{assets/bootstrap/css/bootstrap.min.css}"  rel="stylesheet" type="text/css">
+	<link th:href="@{assets/css/site.css}" rel="stylesheet" type="text/css">
+	<link th:href="@{assets/fontawesome-5.15.4/css/all.min.css}" rel="stylesheet">
+	<script th:src="@{assets/bootstrap/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" th:src="@{assets/js/actions.js}"></script>
+	<script type="text/javascript" th:src="@{assets/js/xlsx_full_min.js}"></script>
+
+</div >
+
+<div th:fragment="header">
+	<div class="row align-items-center">
+	    <div class="col-md-4">
+	        <div class="logo"><img src="assets/images/nbl.png" alt="National bank Limited"></div>
+	    </div>
+		<div class="col-md-4">
+			<div class="logo text-center"><img style="height: 80px;" src="assets/images/dsco.png" alt="dsco"></div>
+		</div>
+	    <div class="col-md-4 ">
+	        <div class="login-info mb-3">
+	            <div class="branch-name"><span class="badge bg-primary font-weight-bold w-25">Branch:</span> <span class="badge bg-primary" th:text="${branchName}"></span></div>
+	            <div class="login-user-name"><span class="badge bg-primary font-weight-bold w-25">User:</span> <span class="badge bg-primary" th:text="${userName}"></span></div>
+	        </div>
+	    </div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 text-center">
+	         <h3 th:text="${heading}"></h3>
+		</div>
+	</div>
+	
+</div>
+
+<div th:fragment="nav">
+	<div class="container-fluid">
+	    <a class="navbar-brand" href="#"><i class="fas fa-home"></i></a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+	        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+	        aria-label="Toggle navigation">
+	        <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+	            <li class="nav-item">
+	                <a class="nav-link active" aria-current="page" href="/home">Bill Collection</a>
+	            </li>
+
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="/report">Report</a>
+					</li>
+				</ul>
+<!--	            <li class="nav-item dropdown">-->
+<!--	                <a class="nav-link dropdown-toggle" href="#" id="enquiryDropdownMenuLink" role="button"-->
+<!--	                    data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--						Enquiry-->
+<!--	                </a>-->
+<!--	                <ul class="dropdown-menu" aria-labelledby="enquiryDropdownMenuLink">-->
+<!--	                    <li><a class="dropdown-item" href="/paymentStatus">Payment Status</a></li>-->
+<!--	                    <li><a class="dropdown-item" href="/detail-report">Detail Report</a></li>-->
+<!--	                    <li><a class="dropdown-item" href="/summary-report">Summary Report</a></li>-->
+<!--	                    <li><a class="dropdown-item" href="/dispute">Dispute</a></li>-->
+<!--	                </ul>-->
+<!--	            </li>-->
+	        </ul>
+	        <form class="d-flex" action="#" th:action="@{/logout}" method="post">
+	            <button class="btn btn-danger" type="submit"><i class="fas fa-sign-out-alt"></i> Logout</button>
+	        </form>
+	    </div>
+
+	</div>
+</div>
+
+
+
+<div th:fragment="footer">
+	<div class="container">
+	    <span class="text-muted">&copyCopyright <span th:text="${#dates.format(#dates.createNow(), 'yyyy')}"></span> National bank Ltd.</span >
+	    <span class="text-muted">| Information Technology Division</span >
+	</div>
+</div>
